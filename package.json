@@ -1,0 +1,23 @@
+{
+  "name": "hackerrank",
+  "version": "1.0.0",
+  "description": "Here is my solutions and practicing for Hackerrank challenges and algorithms exercises.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loremarguimaraes/hackerrank.git"
+  },
+  "author": "Loremar Guimaraes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loremarguimaraes/hackerrank/issues"
+  },
+  "homepage": "https://github.com/loremarguimaraes/hackerrank#readme",
+  "devDependencies": {
+    "eslint": "^4.7.0",
+    "eslint-config-google": "^0.9.1"
+  }
+}
