@@ -24,12 +24,14 @@ function commonChild(s1, s2){
 
         for(var col=2; col<s1.length+2; col++) {
             if(rows>1) {
-                if(m[rows][0]===m[0][col]) {
-                    m[rows][col] = Math.max(m[rows][col],1) + m[rows-1][col-1]
-                }
-                if(m[rows][0]!==m[0][col]) {
-                    m[rows][col] = Math.max(m[rows][col-1],m[rows-1][col])
-                }
+                if(m[rows][0]===m[0][col]) m[rows][col] = Math.max(m[rows][col],1) + m[rows-1][col-1]
+                if(m[rows][0]!==m[0][col]) m[rows][col] = Math.max(m[rows][col-1],m[rows-1][col]) 
+                // if(m[rows][0]===m[0][col]) {
+                //     m[rows][col] = Math.max(m[rows][col],1) + m[rows-1][col-1]
+                // }
+                // if(m[rows][0]!==m[0][col]) {
+                //     m[rows][col] = Math.max(m[rows][col-1],m[rows-1][col])
+                // }
             }
         }
     }
@@ -44,6 +46,6 @@ function commonChild(s1, s2){
 // commonChild('AB','AB') //return 2 'AB'
 // commonChild('HARRY','SALLY') //return 2 'AY'
 // commonChild('ABCDEF','FBDAMN') //return 2 'BD'
-// commonChild('SHINCHAN','NOHARAAA') //return 3 'NHA'
+ commonChild('SHINCHAN','NOHARAAA') //return 3 'NHA'
 // commonChild('AGCAT','GAC') //return 2
 // commonChild('WEWOUCUIDGCGTRMEZEPXZFEJWISRSBBSYXAYDFEJJDLEBVHHKS','FDAGCXGKCTKWNECHMRXZWMLRYUCOCZHJRRJBOAJOQJZZVUYXIC') //return 15
