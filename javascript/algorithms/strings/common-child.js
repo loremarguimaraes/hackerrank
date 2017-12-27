@@ -10,8 +10,6 @@ function commonChild(s1, s2){
         if(rows===0) {
             row = Array.from({length: s1.length+2}, (v, col) => {
                 return (col<2) ? 0 : s1[col-2]
-                // if(col<2) return 0
-                // return s1[col-2]
             });
         }
         if(rows===1) {
@@ -20,8 +18,6 @@ function commonChild(s1, s2){
         if(rows>1) {
             row = Array.from({length: s1.length+2}, (v, col) => {
                 return (col===0) ? s2[rows-2] : 0
-                // if(col===0) return s2[rows-2]
-                // if(col>0) return 0
             });
         }
         m.push(row)
