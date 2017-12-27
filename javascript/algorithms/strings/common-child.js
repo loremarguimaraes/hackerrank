@@ -5,7 +5,9 @@
 function commonChild(s1, s2){
 
     var m = []
+
     for(var rows=0;rows<s2.length+2;rows++) {
+
         var row = []
         if(rows===0) {
             row = Array.from({length: s1.length+2}, (v, col) => {
@@ -30,16 +32,15 @@ function commonChild(s1, s2){
         }
     }
 
-    console.log(m)
-   
+    return (m[m.length-1][m[m.length-1].length-1])
 }
 
-// commonChild('OUDFRMYMAW','AWHYFCCMQX') //return 2 'FM'
-// commonChild('AA','BB') //return 0 ''
-// commonChild('A','A') //return 1 'A'
-// commonChild('AB','AB') //return 2 'AB'
-// commonChild('HARRY','SALLY') //return 2 'AY'
-// commonChild('ABCDEF','FBDAMN') //return 2 'BD'
- commonChild('SHINCHAN','NOHARAAA') //return 3 'NHA'
-// commonChild('AGCAT','GAC') //return 2
-// commonChild('WEWOUCUIDGCGTRMEZEPXZFEJWISRSBBSYXAYDFEJJDLEBVHHKS','FDAGCXGKCTKWNECHMRXZWMLRYUCOCZHJRRJBOAJOQJZZVUYXIC') //return 15
+console.log(commonChild('OUDFRMYMAW','AWHYFCCMQX')) //return 2 'FM'
+// console.log(commonChild('AA','BB')) //return 0 ''
+// console.log(commonChild('A','A')) //return 1 'A'
+// console.log(commonChild('AB','AB')) //return 2 'AB'
+// console.log(commonChild('HARRY','SALLY')) //return 2 'AY'
+// console.log(commonChild('ABCDEF','FBDAMN')) //return 2 'BD'
+// console.log(commonChild('SHINCHAN','NOHARAAA')) //return 3 'NHA'
+// console.log(commonChild('AGCAT','GAC')) //return 2
+// console.log(commonChild('WEWOUCUIDGCGTRMEZEPXZFEJWISRSBBSYXAYDFEJJDLEBVHHKS','FDAGCXGKCTKWNECHMRXZWMLRYUCOCZHJRRJBOAJOQJZZVUYXIC')) //return 15
