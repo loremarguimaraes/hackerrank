@@ -1,7 +1,6 @@
 //https://www.hackerrank.com/challenges/common-child/problem
 //https://en.wikipedia.org/wiki/Longest_common_subsequence_problem
 
-
 function commonChild(s1, s2){
 
     var m = []
@@ -35,7 +34,7 @@ function commonChild(s1, s2){
     return (m[m.length-1][m[m.length-1].length-1])
 }
 
-console.log(commonChild('OUDFRMYMAW','AWHYFCCMQX')) //return 2 'FM'
+// console.log(commonChild('OUDFRMYMAW','AWHYFCCMQX')) //return 2 'FM'
 // console.log(commonChild('AA','BB')) //return 0 ''
 // console.log(commonChild('A','A')) //return 1 'A'
 // console.log(commonChild('AB','AB')) //return 2 'AB'
