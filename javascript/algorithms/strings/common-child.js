@@ -26,12 +26,6 @@ function commonChild(s1, s2){
             if(rows>1) {
                 if(m[rows][0]===m[0][col]) m[rows][col] = Math.max(m[rows][col],1) + m[rows-1][col-1]
                 if(m[rows][0]!==m[0][col]) m[rows][col] = Math.max(m[rows][col-1],m[rows-1][col]) 
-                // if(m[rows][0]===m[0][col]) {
-                //     m[rows][col] = Math.max(m[rows][col],1) + m[rows-1][col-1]
-                // }
-                // if(m[rows][0]!==m[0][col]) {
-                //     m[rows][col] = Math.max(m[rows][col-1],m[rows-1][col])
-                // }
             }
         }
     }
