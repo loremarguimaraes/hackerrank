@@ -1,6 +1,8 @@
-function almostSorted(n,arr) {
-    
-    var nums = arr.split(' ')
+function almostSorted(input) {
+
+    var input = input.split('\n')
+    var n = input[0]
+    var nums = input[1].split(' ')
     nums.unshift(0)
     var start = 0
     var end = 0
@@ -27,6 +29,7 @@ function almostSorted(n,arr) {
     }
 
     if(start===0 && end===0) result = 'yes'
+    console.log(result)
     return result
 
     sgmt = nums.slice(start,end+1)
@@ -42,6 +45,7 @@ function almostSorted(n,arr) {
     }
 
     if(swapd===true) result = result.concat('yes\n swap ', start,' ', end)
+    console.log(result)
     return result
 
     revr = sgmt.reverse()
@@ -53,12 +57,15 @@ function almostSorted(n,arr) {
     }
 
     if(revrd===true) result = result.concat('yes\n reverse ', start,' ', end)
+    console.log(result)
     return result
 
+    console.log('no')
     return 'no'
 
 }
 
+almostSorted('4\n1 2 3 4') //yes
 // almostSorted(4,'1 2 3 4') //yes
 // almostSorted(3,'1 2 3') //yes
 // almostSorted(2,'1 2') //yes
