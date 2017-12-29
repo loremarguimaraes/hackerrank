@@ -57,13 +57,12 @@ function almostSorted(input) {
     if(revrd===true) result = result.concat('yes\nreverse ', start,' ', end)
     //return result
 
-
-    console.log('no')
-    return 'no'
+    console.log(result)
 
 }
 
-almostSorted('4\n1 2 3 4') //yes
+almostSorted('2\n4 2') //yes
+// almostSorted('4\n1 2 3 4') //yes
 // almostSorted(4,'1 2 3 4') //yes
 // almostSorted(3,'1 2 3') //yes
 // almostSorted(2,'1 2') //yes
