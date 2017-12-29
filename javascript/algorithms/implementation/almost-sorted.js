@@ -11,7 +11,7 @@ function almostSorted(input) {
     var swapd = true
     var revr = []
     var revrd = true
-    var result = ''
+    var result = 'no'
 
     for(var s=1;s<=parseInt(n/2);s++) {
         if(nums[s]>nums[s+1]) {
@@ -29,8 +29,7 @@ function almostSorted(input) {
     }
 
     if(start===0 && end===0) result = 'yes'
-    console.log(result)
-    return result
+    //return result
 
     sgmt = nums.slice(start,end+1)
     swap = nums.slice(start,end+1)
@@ -44,9 +43,8 @@ function almostSorted(input) {
         } 
     }
 
-    if(swapd===true) result = result.concat('yes\n swap ', start,' ', end)
-    console.log(result)
-    return result
+    if(swapd===true) result = result.concat('yes\nswap ', start,' ', end)
+    //return result
 
     revr = sgmt.reverse()
     for(var i=0;i<revr.length;i++) {
@@ -56,9 +54,9 @@ function almostSorted(input) {
         } 
     }
 
-    if(revrd===true) result = result.concat('yes\n reverse ', start,' ', end)
-    console.log(result)
-    return result
+    if(revrd===true) result = result.concat('yes\nreverse ', start,' ', end)
+    //return result
+
 
     console.log('no')
     return 'no'
