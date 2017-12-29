@@ -21,7 +21,6 @@ function almostSorted(input) {
     }
 
     for(var e=n;e>parseInt(n/2);e--) {
-        var t = nums[e]
         if(nums[e]<nums[e-1]) {
             end = e
             break
@@ -29,7 +28,6 @@ function almostSorted(input) {
     }
 
     if(start===0 && end===0) result = 'yes'
-    //return result
 
     sgmt = nums.slice(start,end+1)
     swap = nums.slice(start,end+1)
@@ -43,8 +41,7 @@ function almostSorted(input) {
         } 
     }
 
-    if(swapd===true) result = result.concat('yes\nswap ', start,' ', end)
-    //return result
+    if(swapd===true) result = 'yes\nswap ' + start + ' ' + end
 
     revr = sgmt.reverse()
     for(var i=0;i<revr.length;i++) {
@@ -54,14 +51,13 @@ function almostSorted(input) {
         } 
     }
 
-    if(revrd===true) result = result.concat('yes\nreverse ', start,' ', end)
-    //return result
+    if(revrd===true && swapd===false) result = 'yes\nreverse ' + start + ' ' + end
 
     console.log(result)
 
 }
 
-almostSorted('2\n4 2') //yes
+almostSorted('2\n4 2') //yes swap 1 2
 // almostSorted('4\n1 2 3 4') //yes
 // almostSorted(4,'1 2 3 4') //yes
 // almostSorted(3,'1 2 3') //yes
