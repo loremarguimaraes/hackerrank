@@ -14,12 +14,12 @@ function formingMagicSquare(s) {
     ]
 
     var r = s.reduce((total, current) => total.concat(current), []);
-
     var costs = []
-    for(var mi=0;mi<8;mi++) {
+
+    for(var mi=0;mi<m.length;mi++) {
         var cost = 0
-        for(i=0;i<9;i++) {
-            cost += Math.abs(m[mi][i]-r[i])
+        for(ri=0;ri<r.length;ri++) {
+            cost += Math.abs(m[mi][ri]-r[ri])
         }
         costs.push(cost)
     }
