@@ -29,4 +29,4 @@ function formingMagicSquare(s) {
 
 // console.log(formingMagicSquare([[4,8,2],[4,5,7],[6,1,6]])) //return 4
 // console.log(formingMagicSquare([[4,9,2],[3,5,7],[8,1,5]])) //return 1
- console.log(formingMagicSquare([[4,5,8],[2,4,1],[1,9,7]])) //return 14
+// console.log(formingMagicSquare([[4,5,8],[2,4,1],[1,9,7]])) //return 14
